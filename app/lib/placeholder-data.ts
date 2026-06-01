@@ -1,3 +1,14 @@
+const customers = [
+  {
+    id: 'a001',
+    name: 'Alice',
+  },
+  {
+    id: 'a002',
+    name: 'Bob',
+  }
+];
+
 const invoices = [
   {
     customer_id: customers[0].id,
@@ -10,6 +21,5 @@ const invoices = [
     amount: 20348,
     status: 'pending',
     date: '2022-11-14',
-  },
-  // ...
+  }
 ];

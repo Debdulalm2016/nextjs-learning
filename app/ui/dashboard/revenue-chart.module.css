@@ -1,0 +1,50 @@
+.revenue_container {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+.revenue_sub {
+  background-color: #cfacac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  width: 100%;
+}
+.revenue_item {
+  display: flex;
+  flex-direction: row;  
+  padding: 0px;
+  border: 1px solid #306add;
+}
+.revenue_itemY {
+  display: flex;
+  flex-direction: column;  
+  padding: 0px;
+  border: 1px solid #306add;
+  justify-content: flex-end;
+}
+.revenue_bar {    
+  width: 24px;
+  margin-left: 4px;
+  margin-right: 4px;
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-end;
+}
+.revenue_barV {  
+  background-color: #6b1959;
+  width: 24px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.xlabel {
+  color: #4b25a3;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,23 @@
+.invoices_container {
+  background-color: #b5e4d6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.invoice_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border: 1px solid #306add;
+}
+.invoice_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  padding: 1rem 0;  
+}

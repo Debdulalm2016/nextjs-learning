@@ -1,0 +1,16 @@
+.card_box {
+  background-color: #a9bccf;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card_item {  
+  align-items: center;  
+  padding: 1rem 0;
+  color: #1d113a;
+  font-size: 1.2rem;
+  text-align: center;  
+}

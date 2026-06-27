@@ -49,7 +49,7 @@ export function RevenueChartSkeletonx() {
       <div
         style={{ backgroundColor: '#ddd5ee', textAlign: 'center', width: '100%', padding: '20px 0', height: '300px' }}
       >
-        Loading
+        Loading Revenue Chart...
         </div>
       
     </>
@@ -237,6 +237,16 @@ export function InvoicesTableSkeleton() {
           </table>
         </div>
       </div>
+    </div>
+  );
+}
+export function InvoicesTableSkeletonx() {
+  return (
+    
+    <div
+        style={{ backgroundColor: '#ddd5ee', textAlign: 'center', width: '100%', padding: '20px 0', height: '80px' }}
+      >
+        Loading Invoices...
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default async function LatestInvoices({
            Latest Invoices
         </h2>
         { <div className="bg-white px-6">
-          {latestInvoices.map((invoice, i) => {
+          {latestInvoices.map((invoice) => {
             return (
               <div
                 key={invoice.id} 

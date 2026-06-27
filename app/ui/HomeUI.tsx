@@ -9,19 +9,21 @@ export default function HomeUI() {
     <div className={styles.homeContainer}>        
           
           <div className={styles.main}>
-            <h1 >Hello World</h1>
+            <h1 >Home Interface of Landing Page</h1>
             <div className={styles.imageContainer}>
               <Image 
                 src="/Earthimage1.jpg"
                 alt="Earth Image"
                 width={287}
                 height={176}
+                loading="eager"
               />
               <Image 
                 src="/globe.svg"
                 alt="globe Image"
                 width={176}
                 height={176}
+                loading="eager"
               />
             </div>
             <p>

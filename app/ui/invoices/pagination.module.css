@@ -1,0 +1,35 @@
+.arrow_icon{
+  width: 22px;
+  height: 22px;
+}
+.page_arrow_1{  
+  width: 22px;
+  height: 22px;
+}
+.page_arrow_2{    
+  width: 22px;
+  height: 22px;
+}
+.page_number_1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page_number_2{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageination_group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.pagenumber_group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  gap: 10px;
+}

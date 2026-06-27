@@ -1,0 +1,74 @@
+.icon_small{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+.search_group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.create_invoice_link{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 200px;    
+}
+
+.create_invoice_link:hover {
+    background-color: #dfbb9f;
+}
+.delete_button{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;        
+}
+.delete_button:hover {
+    background-color: #df8841;
+}
+.edit_delete_group{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+.invoice_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  width: 100%;
+  padding: 0.5rem 0;
+  
+}
+.row_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+.text_item{
+    margin-left: 10px;
+}
+.status_item{
+    margin-left: 10px;
+}
+.customer_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  width: 100%;
+  padding: 0.5rem 0;
+  
+}
+.form_message {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #dc2626; /* Tailwind's red-600 */
+}
+.crumb_line{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    color: #2b7a1b; /* Tailwind's gray-500 */    
+    margin-bottom: 10px;
+    
+}

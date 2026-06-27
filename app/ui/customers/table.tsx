@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { FormattedCustomersTable } from '@/app/lib/definitions';
+import styles from '@/app/ui/ui-general.module.css'
 
 export default async function CustomersTable({
   customers,
@@ -21,12 +22,12 @@ export default async function CustomersTable({
                 {customers?.map((customer) => (
                   <div
                     key={customer.id}
-                    className="mb-2 w-full rounded-md bg-white p-4"
+                    className={styles.customer_row}
                   >
                     <div className="flex items-center justify-between border-b pb-4">
-                      <div>
-                        <div className="mb-2 flex items-center">
-                          <div className="flex items-center gap-3">
+                      <div className={styles.row_items}>
+                        <div className={styles.row_items}>
+                          <div className={styles.row_items}>
                             <Image
                               src={customer.image_url}
                               className="rounded-full"
@@ -42,14 +43,16 @@ export default async function CustomersTable({
                         </p>
                       </div>
                     </div>
-                    <div className="flex w-full items-center justify-between border-b py-5">
-                      <div className="flex w-1/2 flex-col">
+                    <div className={styles.row_items}>
+                      <div className={styles.row_items}>
                         <p className="text-xs">Pending</p>
-                        <p className="font-medium">{customer.total_pending}</p>
+                        <p style={{marginLeft: '10px', fontWeight: 'bold', marginRight: '20px'}}>
+                          {customer.total_pending}
+                        </p>
                       </div>
-                      <div className="flex w-1/2 flex-col">
+                      <div className={styles.row_items}>
                         <p className="text-xs">Paid</p>
-                        <p className="font-medium">{customer.total_paid}</p>
+                        <p style={{marginLeft: '10px', fontWeight: 'bold', marginRight: '20px'}}>{customer.total_paid}</p>
                       </div>
                     </div>
                     <div className="pt-4 text-sm">

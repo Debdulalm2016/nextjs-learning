@@ -9,8 +9,10 @@ export default function NavLinks() {
   return (
   <>
      <Link href="/">Home</Link><br /><br />
+     <Link href="/dashboard">Dashboard Overview</Link><br /><br />
      <Link href="/dashboard/invoices">Invoices</Link><br /><br />
      <Link href="/dashboard/customer">Customers</Link><br /><br />
+     {pathname === '/dashboard' && <p>You are on the Dashboard Overview page</p>}
      {pathname === '/dashboard/invoices' && <p>You are on the Invoices page</p>}
      {pathname === '/dashboard/customer' && <p>You are on the Customers page</p>}
      

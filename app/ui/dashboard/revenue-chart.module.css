@@ -21,13 +21,13 @@
   flex-direction: row;  
   padding: 0px;
   border: 1px solid #306add;
+  width: 100%;
 }
 .revenue_itemY {
   display: flex;
   flex-direction: column;  
-  padding: 0px;
-  border: 1px solid #306add;
-  justify-content: flex-end;
+  padding: 0px;  
+  justify-content: space-evenly;
 }
 .revenue_bar {    
   width: 24px;

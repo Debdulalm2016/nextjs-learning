@@ -9,6 +9,7 @@ import {RevenueChartSkeletonx} from '@/app/ui/skeletons';
 
 export default async function Page() {
   const latestInvoices = await fetchLatestInvoices();
+  console.log('Latest Invoices:', latestInvoices);
   //const revenue = await fetchRevenue();
   const {numberOfInvoices, numberOfCustomers, totalPaidInvoices, totalPendingInvoices} 
        = await fetchCardData();

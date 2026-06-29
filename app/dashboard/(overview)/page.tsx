@@ -7,6 +7,8 @@ import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import { Suspense } from 'react';
 import {RevenueChartSkeletonx} from '@/app/ui/skeletons';
 
+export const dynamic = 'force-dynamic'; //Added for testing purposes. This will force the page to be re-rendered on every request, instead of being cached. This is useful for testing, but should be removed in production.
+
 export default async function Page() {
   const latestInvoices = await fetchLatestInvoices();
   console.log('Latest Invoices:', latestInvoices);

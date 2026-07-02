@@ -1,31 +1,37 @@
 // This file contains the LatestInvoices component used in the dashboard page.
-
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 import Image from 'next/image';
 
 import { LatestInvoice } from '@/app/lib/definitions';
-import styles from './latest-invoices.module.css';
+//import styles from './latest-invoices.module.css';
 
 export default async function LatestInvoices({
   latestInvoices,
 }: {
   latestInvoices: LatestInvoice[];
 }) {
-  return (
-    <>
+  return (    
       
-      <div className={styles.invoices_container}>
+      <div className="flex flex-col w-full md:col-span-4">
         {/* NOTE: Uncomment this code in Chapter 7 */}
         <h2 className={`mb-4 text-xl md:text-2xl`}>
            Latest Invoices
         </h2>
-        { <div className="bg-white px-6">
-          {latestInvoices.map((invoice) => {
+        <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
+        <div className="bg-white px-6">
+          {latestInvoices.map((invoice, i) => {
             return (
               <div
-                key={invoice.id} 
-                className={styles.invoice_row}
+                key={invoice.id}                 
+                className={clsx(
+                  'flex flex-row items-center justify-between py-4',
+                  {
+                    'border-t': i !== 0,
+                  },
+                )}
               >
-                <div className={styles.invoice_item}>
+                <div className="flex items-center">
                   <Image
                     src={invoice.image_url}
                     alt={`${invoice.name}'s profile picture`}
@@ -34,31 +40,30 @@ export default async function LatestInvoices({
                     height={32}
                   />
                   </div>
-                  <div className={styles.invoice_item}>
+                  <div className="min-w-0">
                     <p className="truncate text-sm font-semibold md:text-base">
                       {invoice.name}
                     </p>
-                  </div>
-                  <div className={styles.invoice_item}>
+                  
                     <p className="hidden text-sm text-gray-500 sm:block">
                       {invoice.email}
                     </p>
-                  </div>
+                  </div>                
                 
-                <div className={styles.invoice_item}>
-                    <p>
+                    <p className="truncate text-sm font-medium md:text-base">
                       {invoice.amount}
                     </p>
-                </div>
+                
               </div>
             );
           })}
-        </div> }
+        </div> 
+        </div>
         <div className="flex items-center pb-2 pt-6">
-          
+          <ArrowPathIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
         </div>
       </div>
-    </>
+    
   );
 }

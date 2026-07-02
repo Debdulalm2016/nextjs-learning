@@ -42,4 +42,13 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { customers, invoices, revenue };
+const users = [
+  {
+    id: '410544b2-4001-4271-9855-fec4b6a6442a',
+    name: 'User',
+    email: 'user@nextmail.com',
+    password: '123456',
+  },
+];
+
+export { customers, invoices, revenue, users };

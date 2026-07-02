@@ -3,7 +3,7 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter  } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
-import styles from './search.module.css';
+//import styles from './search.module.css';
 
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
@@ -24,19 +24,21 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 300);
   
   return (
-    <div className={styles.search_group}>
-      <label htmlFor="search" style={{ marginRight: '10px' }}>
+    <div className="flex flex-1 shrink-0 items-center rounded-md border border-gray-200">
+      <label htmlFor="search" className="sr-only">
         Search
       </label>
+
+      <MagnifyingGlassIcon className="ml-3 h-[18px] w-[18px] shrink-0 text-gray-500 peer-focus:text-gray-900" />
+
       <input
-        className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+        className="peer block w-full rounded-md border-0 bg-transparent py-2 pl-2 pr-3 text-sm outline-none placeholder:text-gray-500"
         placeholder={placeholder}
-        onChange={(e) => handleSearch(e.target.value)}
+        onChange={(e) => {
+          handleSearch(e.target.value);
+        }}
         defaultValue={searchParams.get('query')?.toString()}
-      /> 
-      
-      <MagnifyingGlassIcon  className={styles.icon_small} />
-       
+      />
     </div>
   );
 }
